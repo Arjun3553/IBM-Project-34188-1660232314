@@ -5,10 +5,10 @@
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
-#define ORG "vzye9j"
+#define ORG "axinpr"
 #define DEVICE_TYPE "esp32"
-#define DEVICE_ID "192164156"
-#define TOKEN "147258369"
+#define DEVICE_ID "191040193"
+#define TOKEN "949742287"
 #define alert "alert"
 
 char server [] = ORG ".messaging.Internetofthings.ibmcloud.com";

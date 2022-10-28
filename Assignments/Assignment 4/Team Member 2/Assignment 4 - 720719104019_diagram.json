@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "ANUGRAHA - C - 720719104019",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -74.25, "left": 205.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:VIN", "red", [ "v215.31", "h-295.08", "v-77.06" ] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v238.85", "h-334.53", "v-110.1" ] ],
+    [ "ultrasonic1:ECHO", "esp:D18", "purple", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v0" ] ]
+  ]
+}

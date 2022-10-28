@@ -3,12 +3,12 @@ import time
 import random
 myConfig = { 
     "identity": {
-        "orgId": "2223cm",
-        "typeId": "RaspberryPi",
-        "deviceId":"192165160"
+        "orgId": "vzye9j",
+        "typeId": "raspberrypi",
+        "deviceId":"192156789"
     },
     "auth": {
-        "token": "147258369"
+        "token": "147852963"
     }
 }
 
