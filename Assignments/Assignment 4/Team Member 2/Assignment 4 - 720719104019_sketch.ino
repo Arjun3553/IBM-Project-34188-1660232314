@@ -5,10 +5,10 @@
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
-#define ORG "2223cm"
-#define DEVICE_TYPE "Wokwi-ESP32"
-#define DEVICE_ID "192165210"
-#define TOKEN "147258369"
+#define ORG "axinpr"
+#define DEVICE_TYPE "esp32"
+#define DEVICE_ID "191040193"
+#define TOKEN "949742287"
 #define alert "alert"
 
 char server [] = ORG ".messaging.Internetofthings.ibmcloud.com";
@@ -68,12 +68,12 @@ void loop() {
     if(now - last_Msg > 3000){
       last_Msg = now;
       String payload = "{\"data\":{\"DEVICE_ID\":\"" DEVICE_ID "\"";
-            payload +=",\"msg\":\"" alert "\"";
-            payload +="}}";
+             payload +=",\"msg\":\"" alert "\"";
+             payload +="}}";
       
       Serial.print("Sending payload: ");
       Serial.println(payload);
-      if(client.publish(pubTopic1, (char*) payload.c_str())){
+      if(client.publish(pubTopic1,(char*) payload.c_str())){
         Serial.println("Published");
       }
       else{
@@ -88,4 +88,3 @@ void loop() {
      Serial.println("Distance is greater than 100cm ");
   }
 }
-
