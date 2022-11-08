@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Adithya S Nair",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 12.65, "left": -115.88, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -98.56, "left": -8.73, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:VIN", "red", [ "v269.41", "h-199.28", "v-90.69" ] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v279.65", "h-228.8", "v-114.09" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:D18", "purple", [ "v0" ] ]
+  ]
+}
