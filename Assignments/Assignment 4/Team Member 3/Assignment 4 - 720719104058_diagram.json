@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "GokulVU - 720719104058",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -13.98,
+      "left": -126.66,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -58.44,
+      "left": -6.66,
+      "attrs": { "distance": "62" }
+    }
+  ],
+  "connections": [
+    ["esp:TX0", "$serialMonitor:RX", "", []],
+    ["esp:RX0", "$serialMonitor:TX", "", []],
+    ["ultrasonic1:VCC", "esp:VIN", "red", ["v167.83", "h-198.05", "v-53.67"]],
+    [
+      "ultrasonic1:GND",
+      "esp:GND.2",
+      "black",
+      ["v174.37", "h-228.26", "v-72.43"]
+    ],
+    ["ultrasonic1:TRIG", "esp:D5", "green", ["v0"]],
+    ["ultrasonic1:ECHO", "esp:D18", "purple", ["v0"]]
+  ]
+}
